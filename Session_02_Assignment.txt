@@ -1,0 +1,190 @@
+1. Write a Python program which accepts the user's first and last name and prints them in
+reverse order with a space between them.
+
+code:-
+fname = input("Input your First Name : ")
+lname = input("Input your Last Name : ")
+print ("Hello  " + lname + " " + fname)
+
+output:-
+Input your First Name : Kundan                                       
+Input your Last Name : Kumar                                        
+Hello  Kumar Kundan
+
+
+2. Write a Python program which accepts a sequence of comma-separated numbers from the
+   user and generates a list and a tuple with those numbers.
+   Sample data : 3, 5, 7, 23
+   Output :
+   List : ['3', ' 5', ' 7', ' 23']
+   Tuple : ('3', ' 5', ' 7', ' 23')
+
+   code:-
+   values = input("Input some comma seprated numbers : ")
+   list = values.split(",")
+   tuple = tuple(list)
+   print('List : ',list)
+   print('Tuple : ',tuple)
+
+   output:-
+   Input some comma seprated numbers : 3,5,7,23                       
+   List :  ['3', '5', '7', '23']                                      
+   Tuple :  ('3', '5', '7', '23')
+
+
+3. Write a Python program to display the first and last colours from the following list.
+color_list = ["Red","Green","White" ,"Black"]
+
+code:-
+color_list = ["Red","Green","White" ,"Black"]
+print( "%s %s"%(color_list[0],color_list[-1]))
+
+output:-
+Red Black
+
+4. Write a Python program to print the documents (syntax, description etc.) of Python built-in
+function(s).
+Sample function : abs()
+Expected Result : mat
+abs(number) -> number
+Return the absolute value of the argument.
+
+code:-
+print(abs.__doc__
+
+output:-
+Return the absolute value of the argument.
+
+
+5. Write a Python program to print the calendar of a given month and year.
+Note : Use 'calendar' module.
+
+code:-
+import calendar
+y = int(input("Input the year : "))
+m = int(input("Input the month : "))
+print(calendar.month(y, m))
+
+output:-
+Input the year : 2017                                                                                         
+Input the month : 04                                                                                          
+     April 2017                                                                                               
+Mo Tu We Th Fr Sa Su                                                                                          
+                1  2                                                                                          
+ 3  4  5  6  7  8  9                                                                                          
+10 11 12 13 14 15 16                                                                                          
+17 18 19 20 21 22 23                                                                                          
+24 25 26 27 28 29 30
+
+
+6. Write a Python program to calculate number of days between two dates.
+Sample dates : (2014, 7, 2), (2014, 7, 11)
+Expected output : 9 days
+
+code:-
+from datetime import date
+f_date = date(2014, 7, 2)
+l_date = date(2014, 7, 11)
+delta = l_date - f_date
+print(delta.days)
+
+output:-
+9
+
+
+7. Write a Python program to check whether a specified value is contained in a group of values.
+Test Data :
+3 -> [1, 5, 8, 3] : True
+-1 -> [1, 5, 8, 3] : False
+
+code:-
+def is_group_member(group_data, n):
+ return n in group_data
+print(is_group_member([1, 5, 8, 3], 3))
+print(is_group_member([5, 8, 3], -1))
+
+output:-
+True
+False
+
+
+8. Write a Python program to create a histogram from a given list of integers.
+
+code:-
+def histogram( items ):
+    for n in items:
+        output = ''
+        times = n
+        while( times > 0 ):
+          output += '*'
+          times = times - 1
+        print(output)
+
+histogram([2, 3, 6, 5])
+
+output:-
+**                                                                                                            
+***                                                                                                           
+******                                                                                                        
+*****
+
+
+9. Write a Python program to concatenate all elements in a list into a string and return it.
+
+code:-
+def concatenate_list_data(list):
+    result= ''
+    for element in list:
+        result += str(element)
+    return result
+
+print(concatenate_list_data([1, 5, 12, 2]))
+
+output:-
+15122
+
+
+10. Write a Python program to print out a set containing all the colors from color_list_1 which are
+not present in color_list_2.
+Test Data :
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+
+code:-
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+print("Original set elements:")
+print(color_list_1)
+print(color_list_2)
+print("\nDifferenct of color_list_1 and color_list_2:")
+print(color_list_1.difference(color_list_2))
+print("\nDifferenct of color_list_2 and color_list_1:")
+print(color_list_2.difference(color_list_1))
+
+output:-
+Original set elements:
+{'White', 'Black', 'Red'}
+{'Green', 'Red'}
+
+Differenct of color_list_1 and color_list_2:
+{'White', 'Black'}
+
+Differenct of color_list_2 and color_list_1:
+{'Green'}
+
+
+11. Write a Python program to check whether a file exists.
+
+code:-
+my_file = open('main.py')
+try:
+   my_file.close()
+   print("File found!")
+except FileNotFoundError:
+   print("File not found!")
+
+output:-
+File found!
+
+
+            
